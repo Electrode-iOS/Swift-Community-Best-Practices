@@ -4,9 +4,9 @@ Best practices for software development with Swift.
 
 ## Preface
 
-This document grew from an set of notes I produced while working on [SwiftGraphics][SwiftGraphics]. Most of the recommendations in this guide are definitely considered opinions and arguments could be made for other approaches. That's fine. When other approaches make sense they should be presented in addition.
+This document grew from a set of notes I produced while working on [SwiftGraphics][SwiftGraphics]. Most of the recommendations in this guide are definitely considered opinions and arguments could be made for other approaches. That's fine. When other approaches make sense they should be presented in addition.
 
-These best practices do not dictate or recommend whether Swift should be used in an procedural, object-oriented or functional manner. Instead a pragmatic approach is taken. Individual recommendations might be focused on object-oriented or functional solutions as needed.
+These best practices do not dictate or recommend whether Swift should be used in a procedural, object-oriented or functional manner. Instead a pragmatic approach is taken. Individual recommendations might be focused on object-oriented or functional solutions as needed.
 
 The scope of this document is mostly aimed at the Swift language and Swift standard library. That said specific recommendations on how to use Swift with Mac OS, iOS, WatchOS and TVOS might be provided if a unique Swift angle or insight can be provided. Hints & tips style recommendations on how to use Swift effectively with Xcode and LLDB might also be provided.
 
@@ -86,7 +86,7 @@ struct Example {
 
 ### Parameter List Inference
 
-Specifying parameter types inside a closure expression can lead to a rather verbose code. Only specify types if needed.
+Specifying parameter types inside a closure expression can lead to rather verbose code. Only specify types if needed.
 
 ```swift
 let people = [
@@ -187,7 +187,7 @@ class Person {
 
 ### Converting Instances
 
-When creating code to convert instances from one type to another `init()` methods:
+When creating code to convert instances from one type to another use `init()` methods:
 
 ```swift
 extension NSColor {
@@ -246,7 +246,7 @@ You should use extensions to help organise your instance definitions. One good e
 
 Inside a single source file feel free to break down a definition into whatever extensions you feel best organise the code in question. Don't worry about methods in the main class or struct definition referring to methods or properties inside extensions. As long as it is all contained within one Swift file it is all good.
 
-Conversely, the main instance definition should not refer to elements defined in extensions outside of the main Swift file..
+Conversely, the main instance definition should not refer to elements defined in extensions outside of the main Swift file.
 
 ### Chained Setters
 
