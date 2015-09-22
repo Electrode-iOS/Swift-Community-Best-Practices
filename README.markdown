@@ -170,21 +170,6 @@ class Example {
 }
 ```
 
-If you add a `set` or a `didSet` to the property then you will need to explicitly provide a `get`.
-
-```swift
-class Person {
-    var age: Int {
-        get {
-            return Int(arc4random())
-        }
-        set {
-            print("That's not your age.")
-        }
-    }
-}
-```
-
 ### Converting Instances
 
 When creating code to convert instances from one type to another, use `init()` methods:
