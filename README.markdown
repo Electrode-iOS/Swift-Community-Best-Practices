@@ -347,8 +347,6 @@ This is a list of headings for possible future expansion.
 
 ### Protocols & Protocol Driven Development
 
-### Implicitly Unwrapped Optionals
-
 ### Reference vs Value Types
 
 ### Async Closures
