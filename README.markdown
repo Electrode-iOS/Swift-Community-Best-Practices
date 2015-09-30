@@ -36,7 +36,7 @@ Variables and constants should be lower camel case (example “`vehicleName`”)
 You should use Swift modules to namespace your code and not use Objective-C style class prefixes for Swift code (unless of course interfacing with Objective-C).
 
 Do not use any form of [Hungarian notation][Hungarian_notation] (e.g. k for constants, m for methods), instead use short concise names and use Xcode's type Quick Help (⌥ + click) to discover a variable's type. Similarly do not use [`SNAKE_CASE`][Snake_case].
-
+t
 [Hungarian_notation]: https://en.wikipedia.org/wiki/Hungarian_notation
 [Snake_case]: https://en.wikipedia.org/wiki/Snake_case
 
@@ -282,6 +282,14 @@ It is okay to use `try!` as a temporary error handler until a more comprehensive
 ### Avoid `try?` where possible
 
 `try?` is used to "squelch" errors and is only useful if you truly don't care if the error is generated. In general though, you should catch the error and at least log the failure.
+
+### Avoid `!` where possible
+
+In general prefer `if let`, `guard let`, and `assert` to `!`, whether as a type, a property/method chain, `as!`, or (as noted above) `try!`. It’s better to provide a tailored error message or a default value than to crash without explanation. Design with the possibility of failure in mind.
+
+As an author, if you do use `!`, consider leaving a comment indicating what assumption must hold for it to be used safely, and where to look if that assumption is invalidated and the program crashes. Consider whether that assumption could reasonably be invalidated in a way that would leave the now-invalid `!` unchanged.
+
+As a reviewer, treat `!` with skepticism.
 
 ### Early Returns & Guards
 
