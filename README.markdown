@@ -36,7 +36,7 @@ Variables and constants should be lower camel case (example “`vehicleName`”)
 You should use Swift modules to namespace your code and not use Objective-C style class prefixes for Swift code (unless of course interfacing with Objective-C).
 
 Do not use any form of [Hungarian notation][Hungarian_notation] (e.g. k for constants, m for methods), instead use short concise names and use Xcode's type Quick Help (⌥ + click) to discover a variable's type. Similarly do not use [`SNAKE_CASE`][Snake_case].
-t
+
 [Hungarian_notation]: https://en.wikipedia.org/wiki/Hungarian_notation
 [Snake_case]: https://en.wikipedia.org/wiki/Snake_case
 
