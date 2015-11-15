@@ -283,6 +283,14 @@ It is okay to use `try!` as a temporary error handler until a more comprehensive
 
 `try?` is used to "squelch" errors and is only useful if you truly don't care if the error is generated. In general though, you should catch the error and at least log the failure.
 
+### Avoid `!` where possible
+
+In general prefer `if let`, `guard let`, and `assert` to `!`, whether as a type, a property/method chain, `as!`, or (as noted above) `try!`. It’s better to provide a tailored error message or a default value than to crash without explanation. Design with the possibility of failure in mind.
+
+As an author, if you do use `!`, consider leaving a comment indicating what assumption must hold for it to be used safely, and where to look if that assumption is invalidated and the program crashes. Consider whether that assumption could reasonably be invalidated in a way that would leave the now-invalid `!` unchanged.
+
+As a reviewer, treat `!` with skepticism.
+
 ### Early Returns & Guards
 
 When possible, use `guard` statements to handle early returns or other exits (e.g. fatal errors or thrown errors).
@@ -338,8 +346,6 @@ Furthermore, restricting access to code limits the "exposed surface area" and al
 This is a list of headings for possible future expansion.
 
 ### Protocols & Protocol Driven Development
-
-### Implicitly Unwrapped Optionals
 
 ### Reference vs Value Types
 
