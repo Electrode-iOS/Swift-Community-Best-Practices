@@ -134,7 +134,7 @@ struct PhysicsModel {
 
 class Spaceship {
     static let topSpeed = PhysicsModel.speedOfLightInAVacuum
-    var speed: Double
+    var speed: Int? 
 
     func fullSpeedAhead() {
         speed = Spaceship.topSpeed
