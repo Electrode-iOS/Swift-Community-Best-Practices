@@ -129,7 +129,7 @@ Constants used within type definitions should be declared static within a type. 
 
 ```swift
 struct PhysicsModel {
-    static var speedOfLightInAVacuum = 299_792_458
+    static let speedOfLightInAVacuum = 299_792_458
 }
 
 class Spaceship {
