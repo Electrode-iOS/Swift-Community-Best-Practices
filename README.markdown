@@ -189,7 +189,7 @@ Init methods now seem to be the preferred manner to convert instances of one typ
 struct Mood {
     func toColor() -> NSColor {
         return NSColor.blueColor()
-  }
+    }
 }
 ```
 
