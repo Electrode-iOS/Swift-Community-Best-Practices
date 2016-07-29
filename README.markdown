@@ -40,11 +40,11 @@ Do not use any form of [Hungarian notation][Hungarian_notation] (e.g. k for cons
 [Hungarian_notation]: https://en.wikipedia.org/wiki/Hungarian_notation
 [Snake_case]: https://en.wikipedia.org/wiki/Snake_case
 
-The only exception to this general rule are enum values, which should be uppercase (this follows Apple's "[Swift Programming Language][Swift_Programming_Language]" style):
+It also applies to enum variables, which should be lowercase (as defined by "[0006-apply-api-guidelines-to-the-standard-library][0006-apply-api-guidelines-to-the-standard-library]"):
 
 ```swift
 enum Planet {
-    case Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
+    case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
 }
 ```
 
@@ -368,3 +368,4 @@ This is a list of headings for possible future expansion.
 [SwiftGraphics]: https://github.com/schwa/SwiftGraphics/blob/develop/Documentation/Notes.markdown
 [slack]: http://swift-lang.schwa.io
 [Swift_Programming_Language]: https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html
+[0006-apply-api-guidelines-to-the-standard-library]: https://github.com/apple/swift-evolution/blob/master/proposals/0006-apply-api-guidelines-to-the-standard-library.md
