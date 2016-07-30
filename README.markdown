@@ -40,7 +40,7 @@ Do not use any form of [Hungarian notation][Hungarian_notation] (e.g. k for cons
 [Hungarian_notation]: https://en.wikipedia.org/wiki/Hungarian_notation
 [Snake_case]: https://en.wikipedia.org/wiki/Snake_case
 
-It also applies to enum variables, which should be lowercase (as defined by "[0006-apply-api-guidelines-to-the-standard-library][0006-apply-api-guidelines-to-the-standard-library]"):
+It also applies to enum values, which should be lowercase (as defined by "[0006-apply-api-guidelines-to-the-standard-library][0006-apply-api-guidelines-to-the-standard-library]"):
 
 ```swift
 enum Planet {
