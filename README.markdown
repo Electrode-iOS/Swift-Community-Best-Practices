@@ -211,13 +211,13 @@ Singletons are simple in Swift:
 
 ```swift
 class ControversyManager {
-    static let sharedInstance = ControversyManager()
+    static let shared = ControversyManager()
 }
 ```
 
 The Swift runtime will make sure that the singleton is created and accessed in a thread-safe manner.
 
-Singletons should generally just be accessed via "`sharedInstance`" static property unless you have a compelling reason to name it otherwise. Do not use static functions or global functions to access your singleton.
+Singletons should generally just be accessed via "`shared`" static property unless you have a compelling reason to name it otherwise. Do not use static functions or global functions to access your singleton.
 
 (Because singletons are so easy in Swift and because consistent naming saves you so much time you will have even more time to complain about how singletons are an anti-pattern and should be avoided at all costs. Your fellow developers will thank you.)
 
